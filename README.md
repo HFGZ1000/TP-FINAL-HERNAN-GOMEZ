@@ -181,7 +181,7 @@ Respuesta:
 
 GET /duenos
 
-Utilizado para poblar el <select> del modal en el frontend.
+Utilizado para poblar el select del modal en el frontend.
 
 curl http://localhost:3000/duenos \
  -H "Authorization: Bearer <TOKEN>"
