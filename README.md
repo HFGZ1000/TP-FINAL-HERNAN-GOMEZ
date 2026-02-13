@@ -229,27 +229,47 @@ Se incluyen capturas y colección en carpeta /test.
 Endpoints validados:
 
 Login USER
+
 Login ADMIN
+
 Register USER
+
 Listar Dueños
+
 Listar Mascotas
+
 Crear Mascota
+
 Actualizar Mascota
+
 Eliminar Mascota
 
 ✅ Resumen final del proyecto
 
 ✔ Arquitectura MVC
+
 ✔ Node.js & Express
+
 ✔ TypeScript
+
 ✔ DTOS
+
 ✔ JWT
+
 ✔ Roles
+
 ✔ bcrypt
+
 ✔ express-validator
+
 ✔ CRUD funcional
+
 ✔ JOIN Mascotas + Dueños
+
 ✔ Integración frontend-backend
+
 ✔ Manejo centralizado de errores
+
 ✔ Integridad referencial en base de datos
+
 ✔ Variables de entorno con archivo .env
