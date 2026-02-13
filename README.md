@@ -22,12 +22,19 @@ Incluye autenticación JWT, autorización por roles, validaciones con express-va
 El backend implementa arquitectura MVC:
 
 src/
+
 ├── routes/
+
 ├── controllers/
+
 ├── services/
+
 ├── models/
+
 ├── middlewares/
+
 ├── types/
+
 └── config/
 
 📌 Tecnologías utilizadas
