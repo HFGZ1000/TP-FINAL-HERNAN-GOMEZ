@@ -9,7 +9,7 @@ Sistema de gestión para la veterinaria “Patitas Felices” que permite admini
 
 👤 Dueños
 
-🐾 Mascotas(Solo se administran Mascotas en esta instancia).
+🐾 Mascotas(Solo se administran Mascotas en esta instancia)
 
 📂 Historial clínico (relación en base de datos)
 
@@ -88,6 +88,7 @@ Header requerido
 Authorization: Bearer <TOKEN>
 
 🔑 Login
+
 POST /auth/login
 
 Usuario
@@ -101,6 +102,7 @@ curl -X POST http://localhost:3000/auth/login \
  -d '{"email":"admin@test.com","password":"123456"}'
 
 📝 Registro
+
 POST /auth/register
 
 Incluye validaciones con express-validator:
@@ -115,12 +117,12 @@ curl -X POST http://localhost:3000/auth/register \
 
 🔒 Reglas de acceso por rol
 
-GET /mascotas user, admin
-GET /mascotas/:id user, admin
-POST /mascotas admin
-PUT /mascotas/:id admin
-DELETE /mascotas/:id admin
-GET /duenos user, admin
+GET /mascotas -- user, admin
+GET /mascotas/:id -- user, admin
+POST /mascotas -- admin
+PUT /mascotas/:id -- admin
+DELETE /mascotas/:id -- admin
+GET /duenos -- user, admin
 
 🐶 Mascotas
 
@@ -201,14 +203,14 @@ Tabla dinámica de mascotas con nombre y apellido del dueño
 
 Modal para crear / editar mascota
 
-CRUD habilitado solo para admin
+CRUD habilitado solo para Mascotas, para usuarios con admin role
 
 Integración real con el backend mediante fetch
 
 📜 Reglas de negocio
 
-El usuario con role "USER" solo puede acceder a ver los datos de las mascacotas. Seria el caso de una secretaria que quiere verificar algun dato de la mascota.
-El usuario con role "ADMIN" ya da acceso a la misma tabla de informacion, pero habilita el CRUD.
+El usuario con role "USER" solo puede acceder a ver los datos de las mascacotas. Ejemplo de usuario: el caso de una secretaria que quiere verificar algun dato de la mascota.
+El usuario con role "ADMIN" , da acceso a la misma tabla de informacion, pero habilita el CRUD a mascotas.
 
 # Crear mascota
 

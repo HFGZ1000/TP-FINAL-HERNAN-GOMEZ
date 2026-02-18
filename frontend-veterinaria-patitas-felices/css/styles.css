@@ -66,6 +66,7 @@
   color: white;
   cursor: pointer;
   border-radius: 8px;
+  margin: 5px;
 }
 
 .tabs button.active {
@@ -78,7 +79,7 @@ form input {
   margin-bottom: 18px;
   border-radius: 8px;
   border: none;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(178, 175, 175, 0.25);
   color: white;
 }
 
@@ -90,6 +91,10 @@ form button {
   background: #37ba04;
   color: white;
   cursor: pointer;
+}
+input::placeholder {
+  color: #ffffff; /* blanco puro */
+  opacity: 1; /* importante: algunos navegadores lo bajan por defecto */
 }
 
 /* ---------- TOP BAR (NUEVO) ---------- */

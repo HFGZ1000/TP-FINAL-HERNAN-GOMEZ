@@ -15,9 +15,7 @@ const btnCancelar = document.getElementById("btnCancelar");
 
 let editId = null;
 
-/* =========================
-   LOGOUT / ROLES
-========================= */
+/* LOGOUT / ROLES */
 
 btnLogout.onclick = () => {
   localStorage.clear();
@@ -29,9 +27,7 @@ if (role === "admin") {
   accionesHeader.style.display = "table-cell";
 }
 
-/* =========================
-   DUENOS (NUEVO)
-========================= */
+/*  DUENOS (NUEVO) */
 
 async function cargarDuenos(selectedId = null) {
   const select = document.getElementById("mDueno");
@@ -56,9 +52,7 @@ async function cargarDuenos(selectedId = null) {
   });
 }
 
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
 function abrirModal(titulo, mascota = null) {
   document.getElementById("modalTitle").textContent = titulo;
@@ -85,9 +79,7 @@ function abrirModal(titulo, mascota = null) {
 
 btnCancelar.onclick = () => modal.classList.add("hidden");
 
-/* =========================
-   GUARDAR
-========================= */
+/*  GUARDAR */
 
 btnGuardar.onclick = async () => {
   const data = {
@@ -123,9 +115,7 @@ btnGuardar.onclick = async () => {
 
 btnNueva.onclick = () => abrirModal("Nueva Mascota");
 
-/* =========================
-   LISTADO
-========================= */
+/* LISTADO */
 
 async function cargarMascotas() {
   const res = await fetch(`${API_URL}/mascotas`, {
@@ -171,9 +161,5 @@ async function eliminarMascota(id) {
 
   cargarMascotas();
 }
-
-/* =========================
-   INIT
-========================= */
 
 cargarMascotas();
