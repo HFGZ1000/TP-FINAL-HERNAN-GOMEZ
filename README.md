@@ -9,7 +9,7 @@ Sistema de gestión para la veterinaria “Patitas Felices” que permite admini
 
 👤 Dueños
 
-🐾 Mascotas
+🐾 Mascotas(Solo se administran Mascotas en esta instancia).
 
 📂 Historial clínico (relación en base de datos)
 
@@ -22,12 +22,19 @@ Incluye autenticación JWT, autorización por roles, validaciones con express-va
 El backend implementa arquitectura MVC:
 
 src/
+
 ├── routes/
+
 ├── controllers/
+
 ├── services/
+
 ├── models/
+
 ├── middlewares/
+
 ├── types/
+
 └── config/
 
 📌 Tecnologías utilizadas
@@ -181,7 +188,7 @@ Respuesta:
 
 GET /duenos
 
-Utilizado para poblar el <select> del modal en el frontend.
+Utilizado para poblar el select del modal en el frontend.
 
 curl http://localhost:3000/duenos \
  -H "Authorization: Bearer <TOKEN>"
@@ -199,6 +206,9 @@ CRUD habilitado solo para admin
 Integración real con el backend mediante fetch
 
 📜 Reglas de negocio
+
+El usuario con role "USER" solo puede acceder a ver los datos de las mascacotas. Seria el caso de una secretaria que quiere verificar algun dato de la mascota.
+El usuario con role "ADMIN" ya da acceso a la misma tabla de informacion, pero habilita el CRUD.
 
 # Crear mascota
 
@@ -229,27 +239,47 @@ Se incluyen capturas y colección en carpeta /test.
 Endpoints validados:
 
 Login USER
+
 Login ADMIN
+
 Register USER
+
 Listar Dueños
+
 Listar Mascotas
+
 Crear Mascota
+
 Actualizar Mascota
+
 Eliminar Mascota
 
 ✅ Resumen final del proyecto
 
 ✔ Arquitectura MVC
+
 ✔ Node.js & Express
+
 ✔ TypeScript
+
 ✔ DTOS
+
 ✔ JWT
+
 ✔ Roles
+
 ✔ bcrypt
+
 ✔ express-validator
+
 ✔ CRUD funcional
+
 ✔ JOIN Mascotas + Dueños
+
 ✔ Integración frontend-backend
+
 ✔ Manejo centralizado de errores
+
 ✔ Integridad referencial en base de datos
+
 ✔ Variables de entorno con archivo .env

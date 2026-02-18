@@ -71,7 +71,7 @@ function abrirModal(titulo, mascota = null) {
       mascota.fecha_nacimiento.split("T")[0];
 
     editId = mascota.id_mascota;
-    cargarDuenos(mascota.id_dueno); // ← CLAVE
+    cargarDuenos(mascota.id_dueno);
   } else {
     editId = null;
 
@@ -79,7 +79,7 @@ function abrirModal(titulo, mascota = null) {
     document.getElementById("mEspecie").value = "";
     document.getElementById("mFecha").value = "";
 
-    cargarDuenos(); // ← CLAVE
+    cargarDuenos();
   }
 }
 

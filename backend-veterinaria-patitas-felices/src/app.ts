@@ -1,11 +1,9 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import authRoutes from "./routes/auth.routes";
 import mascotaRoutes from "./routes/mascota.routes";
-import duenoRoutes from "./routes/dueno.routes"; // ← NUEVO
+import duenoRoutes from "./routes/dueno.routes";
 import pool from "./config/db";
 import cors from "cors";
-
-/* middleware global de errores */
 import { errorHandler } from "./middlewares/error.middleware";
 
 const app: Application = express();
@@ -27,7 +25,7 @@ app.use("/auth", authRoutes);
 app.use("/mascotas", mascotaRoutes);
 app.use("/duenos", duenoRoutes); // ← NUEVO
 
-/* middleware global (SIEMPRE AL FINAL) */
+/* middleware global  */
 app.use(errorHandler);
 
 export default app;
